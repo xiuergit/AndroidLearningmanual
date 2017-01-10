@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+    }
+
+
+    defaultConfig {
+        applicationId "com.org.xiuer.androidlearningmanual"
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        /*
+                    * native build settings: taking default for almost everything
+                    */
+
+//        ndk {
+//            moduleName = 'hellow_jni'
+//            abiFilters "armeabi", "armeabi-v7a", "x86"
+//        }
+
+    }
+
+//
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务
+    //compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    //
+    //    compile 'cn.bmob.android:http-legacy:1.0'
+    compile files('libs/BmobSDK_3.5.3_20161116.jar')
+    compile files('libs/okhttp-3.3.1.jar')
+   // compile files('libs/gson-2.6.2.jar')
+    compile files('libs/okio-1.7.0.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/rxandroid-1.2.0.jar')
+    compile files('libs/rxjava-1.1.6.jar')
+    //    compile 'org.xutils:xutils:3.3.36'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile project(path: ':AndroidOrgLib')
+}
+
+
+
+
+

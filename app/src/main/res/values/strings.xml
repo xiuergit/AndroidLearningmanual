@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">android学习手册</string>
+    <string name="left">导航</string>
+    <string name="content">内容</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

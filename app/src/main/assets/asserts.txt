@@ -1,0 +1,38 @@
+ 一、android断言的使用及理解；
+
+   android 断言及assets目录下存放；
+   android的assets 目录下面可以 加载字体、 文本、图片、html 文件；大小限制1mb；
+
+   1、蔣text 文本显示到textView 上；
+
+   InputStream inputStream=null;
+           try{
+              inputStream= getAssets().open("asserts.txt");
+               int size=   inputStream.available();
+               byte buffer[]= new byte[size];
+               inputStream.read(buffer);
+               String text=new String(buffer);
+               mContent.setText(text);
+
+           }catch (Exception e){
+
+           }
+           finally {
+               if(inputStream!=null){
+                   try {
+                       inputStream.close();
+                   } catch (IOException e) {
+                       e.printStackTrace();
+                   }
+
+               }
+           }
+
+二、android图文混排的实现
+
+   文字中加一些表情的实现；
+
+
+    1、一个字符串中，有不同的字体、颜色、大小的设置
+
+

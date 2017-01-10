@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidOrg</string>
+    <string name="title_activity_webshell_test">WebshellTestActivity</string>
+    <string name="button_tag_barChart">柱形图</string>
+    <string name="button_tag_lineChart">折线图</string>
+    <string name="button_tag_candleStickChart">烛形图</string>
+    <string name="button_tag_combinedChart">组合图</string>
+</resources>

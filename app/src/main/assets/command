@@ -1,0 +1,18 @@
+
+常用的mac 终端命令
+
+1、是否显示隐藏文件
+defaults write com.apple.finder AppleShowAllFiles -bool false／true
+
+ option＋command＋esc   选择重启finder  让命令生效
+
+2、name  显示操作系统的有关信息  uname -a
+3、clear 清除屏幕或窗口内容 clear
+4、env 显示当前所有设置过的环境变量 env
+5、who 列出当前登录的所有用户 who
+6、whoami 显示当前正进行操作的用户名 whoami
+7、tty 显示终端或伪终端的名称 tty
+8、stty 显示或重置控制键定义 stty -a
+9、du 查询磁盘使用情况 du -k subdir
+10、df 显示文件系统的总空间和可用空间 df /tmp
+

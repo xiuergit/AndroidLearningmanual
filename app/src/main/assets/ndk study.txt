@@ -1,0 +1,43 @@
+1、 NDK开发，其实是为了项目需要调用底层的一些C/C++的一些东西；另外就是为了效率更加高些；
+    android ndk 提供了opengls
+
+2、在android studio使用ndk
+     a、下载ndk
+         在local.properties  配置
+         ndk.dir=/Users/xiuer/android/android-sdk-macosx/ndk-bundle
+         sdk.dir=/Users/xiuer/android/android-sdk-macosx
+     b、新建一个 java class ndktest.JAVA
+        定义一个原生的方法：
+        public  native  String getString();
+        在static 方法内
+
+        static {
+                System.loadLibrary("hellow_jni");
+
+            }
+
+         这里的 “hellow_jni” 需要在build.gradle 配置
+
+           defaultConfig {
+                    applicationId "com.org.xiuer.androidlearningmanual"
+                    minSdkVersion 19
+                    targetSdkVersion 24
+                    versionCode 1
+                    versionName "1.0"
+                     ／／在这里配置
+
+                    ndk {
+                    moduleName = 'hellow_jni'
+                        abiFilters "armeabi", "armeabi-v7a", "x86"
+                    }
+
+                }
+
+       c、接着用c、c++ 实现我们在java 类中指定的方法
+
+
+                我们可以用命令  javah 生成头文件.h
+                app／创建jni 目录，用来存放 c或c++文件；
+
+       d、接着在activity 里面调用 java类里面本地的方法就可以了；
+

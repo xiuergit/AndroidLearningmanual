@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="titleText" format="string"/>
+    <attr name="titleSize" format="dimension"/>
+    <attr name="titleColor" format="color"/>
+
+    <declare-styleable name="ZXView">
+        <attr name="titleText"/>
+        <attr name="titleSize"/>
+        <attr name="titleColor"/>
+    </declare-styleable>
+
+
+
+</resources>
