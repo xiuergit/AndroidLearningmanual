@@ -1,8 +1,7 @@
 package com.org.xiuer.androidlearningmanual.Fragment.AndroidTheory;
 
-import android.content.BroadcastReceiver;
+import android.app.FragmentTransaction;
 import android.content.Context;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -11,11 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.org.xiuer.androidlearningmanual.Adapter.AndroidTheory.HomeAdapter;
 import com.org.xiuer.androidlearningmanual.R;
+import com.org.xiuer.androidlearningmanual.View.CompositeView;
+import com.org.xiuer.androidlearningmanual.model.AndroidTheory.Catalog;
 import com.org.xiuer.androidlearningmanual.model.AndroidTheory.THomeModel;
-import com.org.xiuer.androidlearningmanual.model.MainGuides;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,8 +61,6 @@ public class HomeFragment_theory extends Fragment {
     public static HomeFragment_theory newInstance(ArrayList<THomeModel> tHomeModels) {
         HomeFragment_theory fragment = new HomeFragment_theory();
         Bundle args = new Bundle();
-
-
         args.putParcelableArrayList(ARG_THomeModelS,tHomeModels);
         fragment.setArguments(args);
         return fragment;
@@ -83,7 +82,40 @@ public class HomeFragment_theory extends Fragment {
 
         View contentView=inflater.inflate(R.layout.fragment_home_fragment_theory, container, false);
         GridView gridView=(GridView) contentView.findViewById(R.id.gv_home_theory);
-        gridView.setAdapter(new HomeAdapter(getActivity(),tHomeModels));
+
+
+        gridView.setAdapter(new HomeAdapter(getActivity(), tHomeModels, new HomeAdapter.ICompositeOnItemClick() {
+            @Override
+            public void onItemClick(CompositeView view, Catalog catalog) {
+
+                if (view.getMainTitle().equals("UI")){
+                    UIFragment_theory theory=UIFragment_theory.newInstance(view.getMainTitle());
+                    theory.setmCatalog(catalog);
+                    FragmentTransaction  transation= getFragmentManager().beginTransaction();
+                    transation.replace(R.id.center_content_frame,theory);
+                    transation.commit();
+
+                }else if (view.getMainTitle().equals("图形动画")){
+                    Log.i(TAG, "onItemClick: "+"图形动画");
+                    Toast.makeText(getActivity(),"当前点击的是图形动画:"+catalog.getName(),Toast.LENGTH_SHORT).show();
+                }
+                else  if(view.getMainTitle().equals("数据存储")){
+                    Log.i(TAG, "onItemClick: "+"数据存储");
+                    Toast.makeText(getActivity(),"当前点击的是数据存储:"+catalog.getName(),Toast.LENGTH_SHORT).show();
+                }
+                else  if(view.getMainTitle().equals("组件")){
+                    Log.i(TAG, "onItemClick: "+"组件");
+                    Toast.makeText(getActivity(),"当前点击的是组件:"+catalog.getName(),Toast.LENGTH_SHORT).show();
+                }
+                else if(view.getMainTitle().equals("有硬件相关的")){
+                    Log.i(TAG, "onItemClick: "+"与硬件相关的");
+                    Toast.makeText(getActivity(),"当前点击的是与硬件相关的"+catalog.getName(),Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        }));
+
         return contentView;
     }
 

@@ -1,0 +1,48 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.org.xiuer.androidlearningmanual.Fragment.AndroidTheory.UIFragment_theory">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment"
+                android:hint="TextView"
+                android:id="@+id/ui_tv_title"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="介绍"
+                android:id="@+id/ui_tv_des"
+                android:layout_below="@id/ui_tv_title"/>
+
+            <ListView
+                android:background="@drawable/backgrand"
+                android:layout_margin="10dp"
+                android:layout_below="@id/ui_tv_des"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:id="@+id/ui_lv_attr"
+
+
+               />
+            <GridView
+                android:layout_below="@id/ui_lv_attr"
+                android:id="@+id/ui_gv_subview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></GridView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+

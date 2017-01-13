@@ -3,9 +3,12 @@ package com.org.xiuer.androidlearningmanual.model.AndroidTheory;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.datatype.BmobRelation;
+import cn.bmob.v3.datatype.BmobReturn;
 
 /**
  * Created by zhangxiu on 2017/1/9.
@@ -16,7 +19,21 @@ public class THomeModel extends BmobObject implements Parcelable{
 
     private String name;
     private String id;
-    private List  catalogs;
+    //没用的字段
+    private List<Catalog>catalogs=new ArrayList<>();
+    //所有子类别
+    private BmobRelation catalog;
+
+
+
+    public BmobRelation getCatalog() {
+        return catalog;
+    }
+
+    public void setCatalog(BmobRelation catalog) {
+        this.catalog = catalog;
+    }
+
 
     protected THomeModel(Parcel in) {
         name = in.readString();
@@ -69,6 +86,7 @@ public class THomeModel extends BmobObject implements Parcelable{
                 "name='" + name + '\'' +
                 ", id='" + id + '\'' +
                 ", catalogs=" + catalogs +
+                ", catalog=" + catalog +
                 '}';
     }
 

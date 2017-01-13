@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/backgrand"
+    >
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+     <TextView
+         android:layout_weight="1"
+         android:id="@+id/ui_tv_name"
+         android:layout_width="0dp"
+         android:text="属性"
+         android:gravity="center"
+         android:layout_height="wrap_content"
+         android:layout_margin="2dp"
+         android:background="#AAAAdd"
+        />
+
+     <TextView
+         android:layout_weight="2"
+         android:text="方法"
+         android:gravity="center"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:id="@+id/ui_tv_att"
+         android:layout_margin="2dp"
+         android:background="#AAAAdd"
+        />
+
+ </LinearLayout>
+
+
+    <TextView
+        android:gravity="center"
+        android:text="解释"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ui_tv_describe"
+
+        android:padding="5dp"
+        android:background="#AAAAdd"
+        android:layout_margin="2dp"
+        />
+</LinearLayout>

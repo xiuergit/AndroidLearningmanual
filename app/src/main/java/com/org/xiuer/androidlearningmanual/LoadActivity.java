@@ -77,7 +77,7 @@ public class LoadActivity extends BaseActivity implements
 
     //内容标题
     @ViewInject(R.id.center_content_tool)
-    private Toolbar mCenterTool;
+    public Toolbar mCenterTool;
 
     //内容
     @ViewInject(R.id.center_content_frame)
@@ -123,6 +123,7 @@ public class LoadActivity extends BaseActivity implements
         mLeftToolbar.setTitle("android学习手册");
         //默认加载第一项
         loadCenterContent(0);
+        mCenterTool.setTitle("Android基础理论");
         RecyclerView.LayoutManager manager=new LinearLayoutManager(this);
         mLeftView.setLayoutManager(manager);
 

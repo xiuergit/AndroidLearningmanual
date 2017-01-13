@@ -1,0 +1,51 @@
+﻿{
+    "name":"TextView",
+    "introduce":"Android TextView 设置字体类型与字体大小的设置，用来显示文本",
+    "attributes":[
+    {"name":"android:autoLink","method":"setAutoLinkMask(int)","description":"设置是否当文本为URL链接/email/电话号码/map时，文本显示为可点击的链接。可选值(none/web/email/phone/map/all) "},
+    {"name":"android:bufferType","method":"setText(CharSequence,TextView.BufferType)","description":"指定getText()方式取得的文本类别。选项editable 类似于StringBuilder可追加字符也就是说getText后可调用append方法设置文本内容。spannable 则可在给定的字符区域使用样式"},
+    {"name":"android:digits","method":"setKeyListener(KeyListener)","description":"设置允许输入哪些字符。如“1234567890.+-*/% ()”"},
+    {"name":"android:drawableBottom","method":"setCompoundDrawablesWithIntrinsicBounds(int,int,int,int)","description":"在text的下方输出一个drawable，如图片。如果指定一个颜色的话会把text的背景设为该颜色，并且同时和background使用时覆盖后者。"},
+    {"name":"android:editable","method":"","description":"设置是否可编辑。"},
+    {"name":"android:ellipsize","method":"setEllipsize(TextUtils.TruncateAt)","description":"设置当文字过长时,该控件该如何显示。有如下值设置：”start”—?省略号显示在开头;”end”——省略号显示在结尾;”middle”—-省略号显示在中间;”marquee” ——以跑马灯的方式显示(动画横向移动)"},
+    {"name":"android:gravity","method":"setGravity(int)","description":"设置文本位置，如设置成“center”，文本将居中显示。"},
+    {"name":"android:hint","method":"setHint(int)","description":"为空时显示的文字提示信息，可通过textColorHint设置提示信息的颜色。此属性在EditView中使用，但是这里也可以用。"},
+    {"name":"android:ems","method":"setEms(int)","description":"设置TextView的宽度为N个字符的宽度。这里测试为一个汉字字符宽度"},
+    {"name":"android:maxLength","method":"setFilters(InputFilter)	","description":"限制显示的文本长度，超出部分不显示。"},
+    {"name":"android:lines","method":"setLines(int)","description":"设置文本的行数，设置两行就显示两行，即使第二行没有数据。"},
+    {"name":"android:textColor","method":"setTextColor(int)","description":"设置文本颜色"}
+  ],
+    "subview":[
+        {
+            "name":"",
+            "introduce":"Android TextView 设置字体类型与字体大小的设置，用来显示文本",
+            "attributes":[
+                {"name":"android:autoLink","method":"setAutoLinkMask(int)","description":"设置是否当文本为URL链接/email/电话号码/map时，文本显示为可点击的链接。可选值(none/web/email/phone/map/all) "},
+                {"name":"android:bufferType","method":"setText(CharSequence,TextView.BufferType)","description":"指定getText()方式取得的文本类别。选项editable 类似于StringBuilder可追加字符也就是说getText后可调用append方法设置文本内容。spannable 则可在给定的字符区域使用样式"},
+                {"name":"android:digits","method":"setKeyListener(KeyListener)","description":"设置允许输入哪些字符。如“1234567890.+-*/% ()”"},
+                {"name":"android:drawableBottom","method":"setCompoundDrawablesWithIntrinsicBounds(int,int,int,int)","description":"在text的下方输出一个drawable，如图片。如果指定一个颜色的话会把text的背景设为该颜色，并且同时和background使用时覆盖后者。"},
+                {"name":"android:editable","method":"","description":"设置是否可编辑。"},
+                {"name":"android:ellipsize","method":"setEllipsize(TextUtils.TruncateAt)","description":"设置当文字过长时,该控件该如何显示。有如下值设置：”start”—?省略号显示在开头;”end”——省略号显示在结尾;”middle”—-省略号显示在中间;”marquee” ——以跑马灯的方式显示(动画横向移动)"},
+                {"name":"android:gravity","method":"setGravity(int)","description":"设置文本位置，如设置成“center”，文本将居中显示。"},
+                {"name":"android:hint","method":"setHint(int)","description":"为空时显示的文字提示信息，可通过textColorHint设置提示信息的颜色。此属性在EditView中使用，但是这里也可以用。"},
+                {"name":"android:ems","method":"setEms(int)","description":"设置TextView的宽度为N个字符的宽度。这里测试为一个汉字字符宽度"},
+                {"name":"android:maxLength","method":"setFilters(InputFilter)	","description":"限制显示的文本长度，超出部分不显示。"},
+                {"name":"android:lines","method":"setLines(int)","description":"设置文本的行数，设置两行就显示两行，即使第二行没有数据。"},
+                {"name":"android:textColor","method":"setTextColor(int)","description":"设置文本颜色"}
+            ],
+            "subview":[
+
+
+            ]
+
+
+        }
+
+    ]
+
+
+}
+
+
+
+
