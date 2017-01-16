@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidLearningmanual-master.iml" filepath="$PROJECT_DIR$/AndroidLearningmanual-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidLearningmanual.iml" filepath="$PROJECT_DIR$/AndroidLearningmanual.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidOrgLib/AndroidOrgLib.iml" filepath="$PROJECT_DIR$/AndroidOrgLib/AndroidOrgLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
